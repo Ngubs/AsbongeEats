@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AsbongeEats.Views.LoginView"
+             Title="LoginView"
+             xmlns:models="clr-namespace:AsbongeEats.Models">
+    
+    <Grid RowDefinitions=".3*, .7*">
+        <Image Aspect="AspectFill" Source="back_logo.jpg" />
+        <Grid BackgroundColor="WhiteSmoke"  Opacity=".8"/>
+        <Grid ColumnDefinitions="*" Margin="0,0,0,35">
+            <Image Aspect="AspectFill" WidthRequest="300" Source="logo1.png" />
+        </Grid>
+        <Grid Grid.Row="1">
+            <RoundRectangle Margin="-5,-20,-5,-2"
+                            CornerRadius="35,35,0,0" Fill="White"/>
+            <VerticalStackLayout Margin="30,0,30,0">
+                <Label
+                    FontAttributes="Bold"
+                    FontSize="Medium"
+                    FontFamily="bold"
+                    Text="Welcome!"
+                    TextColor="Black"/>
+
+                <Label Text="Log in to continue"
+                       FontFamily="medium"
+                       TextColor="DarkGrey"/>
+
+                <Grid Margin="0,30,0,0" ColumnDefinitions=".2*, .8*">
+                    <Label FontFamily="FontAwesomeSolid" 
+                           Text="{x:Static models:Icons.UserLarge}"
+                           TextColor="RoyalBlue"
+                           FontSize="40">
+                    </Label>
+                    <Entry Grid.Column="1"
+                           Placeholder="USERNAME"
+                           VerticalOptions="Center"
+                           TextColor="Black"/>
+                </Grid>
+                <Grid Margin="0,30,0,0" ColumnDefinitions=".2*, .8*">
+                    <Label FontFamily="FontAwesomeSolid" 
+                           Text="{x:Static models:Icons.Key}"
+                           TextColor="RoyalBlue"
+                           FontSize="40">
+                    </Label>
+                    <Entry Grid.Column="1"
+                           IsPassword="True"
+                           Placeholder="PASSWORD"
+                           VerticalOptions="Center"
+                           TextColor="Black"/>
+                </Grid>
+                
+                 <Button Text="Login" 
+                            BackgroundColor="RoyalBlue" 
+                            TextColor="White"
+                            FontFamily="Bold"
+                            Margin="0,35,0,0"
+                            HeightRequest="60"/>
+
+                <Label Text="Forgot your password?" 
+                           HorizontalOptions="Center"   
+                           TextColor="Black"
+                           FontFamily="Bold"
+                           Margin="0,40,0,0"
+                           HeightRequest="60"
+                           TextDecorations="Underline"/>
+                
+                <Button Text="Create new Account" 
+                           BackgroundColor="DodgerBlue" 
+                           TextColor="WhiteSmoke"
+                           FontFamily="Bold"
+                           Margin="0,0,0,0"
+                           HeightRequest="60"/>
+            </VerticalStackLayout>
+        </Grid>
+      
+    </Grid>
+</ContentPage>
